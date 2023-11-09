@@ -2,8 +2,17 @@ import React from 'react';
 import { PiMapPinFill } from 'react-icons/pi';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
+import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const Contact = () => {
+  const iconStyle = {
+    item: { width: '100px' },
+  };
+
+  if (window.innerWidth < 1000) {
+    iconStyle.item.width = '100%';
+  }
+
   const handleSendMessage = () => {
     const nama = document.querySelector('#nama').value;
     const noWa = document.querySelector('#noWa').value;
@@ -37,7 +46,7 @@ const Contact = () => {
             </div>
             <div className="mb-3 form-floating">
               <textarea id="pesan" className="form-control" style={{ height: '200px' }} />
-              <label htmlFor="floatingTextarea2">Comments</label>
+              <label htmlFor="floatingTextarea2">Pesan</label>
             </div>
 
             <div class="text-center mt-4 d-grid">
@@ -47,21 +56,22 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="col justify-items-between">
-          <div className="d-flex gap-4 my-3 mb-lg-4">
-            <PiMapPinFill size={100} />
+        <div className="col text-center text-lg-start mt-5 mt-lg-0">
+          <div className="d-lg-flex gap-4 my-3 mb-lg-4">
+            <PiMapPinFill style={iconStyle.item} size={50} />
             <div>
-              <h4>Address</h4>
+              <h4>Alamat</h4>
               <a
                 href="https://www.google.com/maps/place/Jl.+Mertajasah+No.70,+Blandungan,+Mertajasah,+Kec.+Bangkalan,+Kabupaten+Bangkalan,+Jawa+Timur+69116/@-7.0419511,112.7163418,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd805e3d78bed45:0xf8e228f9cc8494cd!8m2!3d-7.0419564!4d112.7189167!16s%2Fg%2F11gfgbvndd?entry=ttu"
                 className="text-dark"
               >
-                Jl. Mertajasah No.70, Blandungan, Mertajasah, Kec. Bangkalan, Kabupaten Bangkalan, Jawa Timur
+                Jl. Mertajasah No.70, Blandungan, Mertajasah, <br />
+                Kec. Bangkalan, Kabupaten Bangkalan, Jawa Timur
               </a>
             </div>
           </div>
-          <div className="d-flex gap-4 my-3 my-lg-4">
-            <BsTelephoneFill size={65} />
+          <div className="d-lg-flex gap-4 my-3 my-lg-4">
+            <BsTelephoneFill style={iconStyle.item} size={50} />
             <div>
               <h4>Telepon</h4>
               <a href="tel:0313062126" className="text-dark">
@@ -69,8 +79,8 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="d-flex gap-4 my-3 my-lg-4">
-            <AiOutlineMail size={70} />
+          <div className="d-lg-flex gap-4 my-3 my-lg-4">
+            <AiOutlineMail style={iconStyle.item} size={50} />
             <div>
               <h4>Email</h4>
               <a href="mailto:smkn3bangkalan.adm@gmail.com" className="text-dark">
