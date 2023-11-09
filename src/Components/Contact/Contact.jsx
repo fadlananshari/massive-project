@@ -62,7 +62,7 @@ const Contact = () => {
             <div>
               <h4>Alamat</h4>
               <a
-                href="https://www.google.com/maps/place/Jl.+Mertajasah+No.70,+Blandungan,+Mertajasah,+Kec.+Bangkalan,+Kabupaten+Bangkalan,+Jawa+Timur+69116/@-7.0419511,112.7163418,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd805e3d78bed45:0xf8e228f9cc8494cd!8m2!3d-7.0419564!4d112.7189167!16s%2Fg%2F11gfgbvndd?entry=ttu"
+                href="https://maps.app.goo.gl/kK4KaonjJJcjRh249"
                 className="text-dark"
               >
                 Jl. Mertajasah No.70, Blandungan, Mertajasah, <br />
