@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/js/bootstrap.js';
 import Hero from '../Components/Hero/Hero';
 import Syarat from '../Components/Syarat/Syarat';
