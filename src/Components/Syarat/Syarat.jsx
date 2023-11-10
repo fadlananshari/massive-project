@@ -2,7 +2,7 @@ import React from 'react';
 
 const Syarat = () => {
   return (
-    <div className="container my-5">
+    <div className="container py-5">
       <h2 className='fw-bolder'>Apa saja syarat keikutsertaan Siswa?</h2>
       <p>Berikut Syarat untuk mengikuti Paktek Kerja lapangan (PKL)</p>
       <div className="table-responsive">
