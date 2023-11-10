@@ -42,7 +42,7 @@ const Contact = () => {
               <input type="text" id="nama" class="form-control" placeHolder="Nama" />
             </div>
             <div class="mb-3">
-              <input type="text" id="noWa" class="form-control" placeHolder="Email" />
+              <input type="text" id="noWa" class="form-control" placeHolder="No. Whatsapp" />
             </div>
             <div className="mb-3 form-floating">
               <textarea id="pesan" className="form-control" style={{ height: '200px' }} />
@@ -61,10 +61,7 @@ const Contact = () => {
             <PiMapPinFill style={iconStyle.item} size={50} />
             <div>
               <h4>Alamat</h4>
-              <a
-                href="https://www.google.com/maps/place/Jl.+Mertajasah+No.70,+Blandungan,+Mertajasah,+Kec.+Bangkalan,+Kabupaten+Bangkalan,+Jawa+Timur+69116/@-7.0419511,112.7163418,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd805e3d78bed45:0xf8e228f9cc8494cd!8m2!3d-7.0419564!4d112.7189167!16s%2Fg%2F11gfgbvndd?entry=ttu"
-                className="text-dark"
-              >
+              <a href="https://maps.app.goo.gl/kK4KaonjJJcjRh249" className="text-dark">
                 Jl. Mertajasah No.70, Blandungan, Mertajasah, <br />
                 Kec. Bangkalan, Kabupaten Bangkalan, Jawa Timur
               </a>

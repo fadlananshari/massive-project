@@ -9,13 +9,13 @@ const Syarat = () => {
         <table class="table table-bordered table-striped text-center">
           <thead>
             <tr >
-              <th scope="col" >
+              <th scope="col" className='bg-primary text-white'>
                 No
               </th>
-              <th scope="col" >
+              <th scope="col" className='bg-primary text-white'>
                 Komponen
               </th>
-              <th scope="col" >
+              <th scope="col" className='bg-primary text-white'>
                 Syarat Ketentuan
               </th>
             </tr>

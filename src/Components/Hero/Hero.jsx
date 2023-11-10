@@ -9,7 +9,7 @@ const Hero = () => {
         </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">SMEKTABISA</h1>
-          <h4 className='mb-4'>Siap kerja - Santun - Mandiri - Kreatif</h4>
+          <h4 className='mb-4 fw-bold'>Siap kerja - Santun - Mandiri - Kreatif</h4>
           <p class="lead">
             Sekolah Menengah Kejuruan (SMK) merupakan salah satu bentuk satuan pendidikan formal yang menyelenggarakan pendidikan kejuruan pada jenjang pendidikan menengah sebagai lanjutan dari SMP, MTs, atau bentuk lain yang sederajat.
           </p>
