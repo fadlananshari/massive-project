@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <FooterStyled>
       <div className="bg-footer">
-        <div className="container mt-5 pt-5">
+        <div className="container pt-5">
           <footer className="row">
             <div className="col mb-3">
               <img src={Logo} alt="logo" className="img-fluid" />

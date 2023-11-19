@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.js";
 import Hero from "../Components/Hero/Hero";
 import Syarat from "../Components/Syarat/Syarat";
 import Pkl from "../Components/Pkl/Pkl";
-import Footer from "../Components/Footer.jsx/Footer";
 import Contact from "../Components/Contact/Contact";
 import TentangKami from "../Components/TentangKami/TentangKami";
 import VisiMisi from "../Components/VisiMisi/VisiMisi";
@@ -18,7 +17,6 @@ const Home = () => {
       <VisiMisi />
       <ProgramStudi />
       <Contact />
-      <Footer />
     </>
   );
 };
