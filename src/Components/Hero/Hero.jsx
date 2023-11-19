@@ -1,29 +1,30 @@
-import React from 'react';
+import HeroStyled from "./Hero.styled";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img src="https://getbootstrap.com/docs/5.3/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
-        </div>
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">SMEKTABISA</h1>
-          <h4 className='mb-4 fw-bold'>Siap kerja - Santun - Mandiri - Kreatif</h4>
-          <p class="lead">
-            Sekolah Menengah Kejuruan (SMK) merupakan salah satu bentuk satuan pendidikan formal yang menyelenggarakan pendidikan kejuruan pada jenjang pendidikan menengah sebagai lanjutan dari SMP, MTs, atau bentuk lain yang sederajat.
-          </p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
-              Daftar sekarang!
-            </button>
-            <button type="button" class="btn btn-outline-primary btn-lg px-4">
-              Cek persyaratan PKL
-            </button>
+    <HeroStyled>
+      <div className="bg-image">
+        <div className="container h-100">
+          <div className="row h-100 justify-content-center align-items-center">
+            <div className="col-lg-12">
+              <h1 className="text-title text-center">SMKN 3 BANGKALAN</h1>
+              <h3 className="text-desc text-center mb-5">
+                Praktik Kerja Lapangan
+              </h3>
+              <div className="d-flex justify-content-center">
+                <Link
+                  to="#login"
+                  className="btn btn-primary btn-lg mt-5 btn-daftar"
+                >
+                  Daftar Sekarang
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </HeroStyled>
   );
 };
 

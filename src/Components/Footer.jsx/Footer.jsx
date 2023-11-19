@@ -1,116 +1,91 @@
-import React from 'react';
+import React from "react";
+import FooterStyled from "./Footer.styled";
+import Logo from "../../assets/logo-f.png";
+import MedsosFacebook from "../../assets/medsos-facebook.png";
+import MedsosInstagram from "../../assets/medsos-instagram.png";
+import MedsosTwitter from "../../assets/medsos-twitter.png";
+import MedsosYoutube from "../../assets/medsos-youtube.png";
 
 const Footer = () => {
   return (
-    <div className="">
-      <div class="container">
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-          <div class="col mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-              <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap" />
-              </svg>
-            </a>
-            <p class="text-body-secondary">&copy; 2023</p>
-          </div>
+    <FooterStyled>
+      <div className="bg-footer">
+        <div className="container mt-5 pt-5">
+          <footer className="row">
+            <div className="col mb-3">
+              <img src={Logo} alt="logo" className="img-fluid" />
+            </div>
 
-          <div class="col mb-3"></div>
+            <div className="col mb-3">
+              <h5 className="text-white mb-4">SMKN 3 Bangkalan</h5>
+              <h5 className="text-white mb-4">
+                <a
+                  href="http://www.smkn3bangkalan.sch.id/"
+                  className="text-white text-decoration-none"
+                >
+                  http://www.smkn3bangkalan.sch.id/
+                </a>
+              </h5>
+              <h5 className="text-white mb-4">
+                Jl. Mertajasah No.70, Blandungan, Mertajasah, Kec. Bangkalan,
+                Kabupaten Bangkalan, Jawa Timur
+              </h5>
+            </div>
 
-          <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  About
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div className="col mb-3">
+              <h5 className="text-white">Navigasi</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-white fs-5">
+                    Beranda
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-white fs-5">
+                    Tentang Kami
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-white fs-5">
+                    Program
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-white fs-5">
+                    Kontak
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Home
+            <div className="col mb-3">
+              <h5 className="text-center text-white">Media Sosial</h5>
+              <div className="d-flex justify-content-center">
+                <a href="#">
+                  <img src={MedsosFacebook} alt="facebook" />
                 </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Features
+                <a href="#">
+                  <img src={MedsosInstagram} alt="instagram" />
                 </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Pricing
+                <a href="#">
+                  <img src={MedsosTwitter} alt="twitter" />
                 </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  FAQs
+                <a href="#">
+                  <img src={MedsosYoutube} alt="youtube" />
                 </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  About
-                </a>
-              </li>
-            </ul>
+              </div>
+            </div>
+          </footer>
+          <div className="row">
+            <div className="col">
+              <p className="text-center text-white">
+                Copyright Smektabisa All Rights Reserved &copy; 2023
+              </p>
+            </div>
           </div>
-
-          <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  About
-                </a>
-              </li>
-            </ul>
-          </div>
-        </footer>
+        </div>
       </div>
-    </div>
+    </FooterStyled>
   );
 };
 

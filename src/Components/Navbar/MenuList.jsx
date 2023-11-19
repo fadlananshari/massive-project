@@ -1,24 +1,20 @@
 const MenuList = [
   {
-    label: 'Beranda',
-    url: '/',
-
+    label: "Beranda",
+    url: "/",
   },
   {
-    label: 'Program',
-    url: '/program',
-
+    label: "Tentang Kami",
+    url: "#tentang-kami",
   },
   {
-    label: 'Kontak',
-    url: '/kontak',
-
+    label: "Program",
+    url: "/program",
   },
   {
-    label: 'Kegiatanku',
-    url: '/kegiatan',
-
+    label: "Kontak",
+    url: "/kontak",
   },
 ];
 
-export default MenuList
+export default MenuList;
