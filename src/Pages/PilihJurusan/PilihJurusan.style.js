@@ -1,23 +1,21 @@
 import styled from 'styled-components';
 
-const LoginStyled = styled.div`
+const PilihJurusanStyled = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Poppins:wght@200;300;400;500;600;700&family=Roboto+Mono&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap');
 
   * {
     font-family: 'Roboto', serif;
   }
 
-  .bg-login {
-    background-color: #e3edff;
+  .bg-color {
+    background: #DCE8FF;
   }
 
-  .border-bottom {
-    border: 0 !important;
-    border-bottom: 1px solid black !important;
-    border-radius: 0px !important;
+  .text-blue {
+    color: #1E90FF;
   }
 
-  .btn-login {
+  .btn-cari {
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -31,22 +29,11 @@ const LoginStyled = styled.div`
     border-radius: 10px;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     color: #fff;
-    background-color: #4f65b4;
-    border-color: #4f65b4;
-  }
-
-  .daftar {
-    color: #0500ff;
+    background-color: #1E90FF;
+    border-color: #1E90FF;
+    height: max-content;
     text-decoration: none;
-  }
-
-  .login {
-    color: #1e90ff;
-  }
-
-  .bottom {
-    margin-top: auto !important;
   }
 `;
 
-export default LoginStyled;
+export default PilihJurusanStyled;
