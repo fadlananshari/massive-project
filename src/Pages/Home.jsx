@@ -12,14 +12,14 @@ import Navbar from "../Components/Navbar/Navbar";
 
 const Home = () => {
   const data = [
-    { label: 'Beranda', url: '/' },
-    { label: 'Tentang Kami', url: '/#Tentang' },
-    { label: 'Program', url: '/#program'},
-    { label: 'Kontak', url: '/#Kontak' },
+    { label: "Beranda", url: "/" },
+    { label: "Tentang Kami", url: "/#Tentang" },
+    { label: "Program", url: "/#program" },
+    { label: "Kontak", url: "/#Kontak" },
   ];
   return (
     <>
-      <Navbar data={data}/>
+      <Navbar data={data} login={true} profile={false} />
       <Hero />
       <TentangKami />
       <VisiMisi />

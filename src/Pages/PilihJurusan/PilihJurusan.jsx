@@ -1,14 +1,14 @@
-import React from 'react';
-import JurusanCarousel from '../../Components/Jurusan/JurusanCarousel';
-import Img from '../../assets/pilih-jurusan/pilih-jurusan-img.png';
-import Navbar from '../../Components/Navbar/Navbar';
+import React from "react";
+import JurusanCarousel from "../../Components/Jurusan/JurusanCarousel";
+import Img from "../../assets/pilih-jurusan/pilih-jurusan-img.png";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const PilihJurusan = () => {
   const data = [
-    { label: 'Beranda', url: '/' },
-    { label: 'Program', url: '/program' },
-    { label: 'Notifikasi', url: '/notifikasi' },
-    { label: 'Kegiatanku', url: '/kegiatanku' },
+    { label: "Beranda", url: "/homepage" },
+    { label: "Program", url: "/program" },
+    { label: "Notifikasi", url: "/notifikasi" },
+    { label: "Kegiatanku", url: "/kegiatanku" },
   ];
   return (
     <>

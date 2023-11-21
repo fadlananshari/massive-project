@@ -34,6 +34,11 @@ const NavbarStyled = styled.div`
     border: none;
     background: #fff;
   }
+
+  .btn-none {
+    background: none;
+    border: none;
+  }
 `;
 
 export default NavbarStyled;
