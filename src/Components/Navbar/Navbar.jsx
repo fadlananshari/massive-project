@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import MenuList from './MenuList';
 import Logo from '../../assets/logo.png';
 import NavbarStyled from './Navbar.styled';
 
-const Navbar = () => {
-  // const [isLogedIn, setIsLogedIn] = useState(false);
+const Navbar = ({ data }) => {
   return (
     <NavbarStyled>
       <nav className="navbar navbar-expand-lg fixed-top background-custom">
@@ -20,7 +18,7 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse gap-4 my-auto" id="navbarNavAltMarkup">
             <div className="navbar-nav mx-lg-auto gap-lg-3">
-              {MenuList.map((item, index) => {
+              {data.map((item, index) => {
                 return (
                   <p className="my-auto" key={index}>
                     <Link to={item.url} className="nav-link text-nav">
@@ -31,28 +29,9 @@ const Navbar = () => {
               })}
             </div>
 
-            <Link to="login">
+            <Link to="/login">
               <button className="btn btn-primary text-btn-login">Login</button>
             </Link>
-            {/* {isLogedIn ? (
-              <button
-                className="btn btn-primary"
-                onClick={() => {
-                  setIsLogedIn(false);
-                }}
-              >
-                Keluar
-              </button>
-            ) : (
-              <button
-                className="btn btn-primary text-btn-login"
-                onClick={() => {
-                  setIsLogedIn(true);
-                }}
-              >
-                Login
-              </button>
-            )} */}
           </div>
         </div>
       </nav>

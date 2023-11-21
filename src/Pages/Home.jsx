@@ -8,10 +8,18 @@ import Contact from "../Components/Contact/Contact";
 import TentangKami from "../Components/TentangKami/TentangKami";
 import VisiMisi from "../Components/VisiMisi/VisiMisi";
 import ProgramStudi from "../Components/ProgramStudi/ProgramStudi";
+import Navbar from "../Components/Navbar/Navbar";
 
 const Home = () => {
+  const data = [
+    { label: 'Beranda', url: '/' },
+    { label: 'Tentang Kami', url: '/#Tentang' },
+    { label: 'Program', url: '/#program'},
+    { label: 'Kontak', url: '/#Kontak' },
+  ];
   return (
     <>
+      <Navbar data={data}/>
       <Hero />
       <TentangKami />
       <VisiMisi />
