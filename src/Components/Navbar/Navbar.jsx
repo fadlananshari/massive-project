@@ -42,7 +42,7 @@ const Navbar = () => {
                 setIsLogedIn(true);
               }}
             >
-              Masuk
+              Login
             </button>
           )}
         </div>
