@@ -48,13 +48,6 @@ const LoginStyled = styled.div`
   .bottom {
     margin-top: auto !important;
   }
-
-  .btn-exit {
-    background: none;
-    border: none;
-    width: 2.875rem;
-    height: 2.25rem;
-  }
 `;
 
 export default LoginStyled;
