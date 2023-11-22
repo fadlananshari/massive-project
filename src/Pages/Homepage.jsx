@@ -1,6 +1,10 @@
-import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import HeroLogin from "../Components/HeroLogin/HeroLogin";
+import TentangKamiLogin from "../Components/TentangKamiLogin/TentangKamiLogin";
+import TujuanPraktik from "../Components/TujuanPraktik/TujuanPraktik";
+import SyaratPendaftaran from "../Components/SyaratPendaftaran/SyaratPendaftaran";
+import TempatPkl from "../Components/TempatPkl/TempatPkl";
+import Contact from "../Components/Contact/Contact";
 
 const Homepage = () => {
   const data = [
@@ -16,6 +20,11 @@ const Homepage = () => {
     <>
       <Navbar data={data} login={false} profile={true} />
       <HeroLogin />
+      <TentangKamiLogin />
+      <TujuanPraktik />
+      <SyaratPendaftaran />
+      <TempatPkl />
+      <Contact />
     </>
   );
 };
