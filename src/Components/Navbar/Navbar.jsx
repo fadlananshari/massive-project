@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import Logo from "../../assets/logo.png";
 import NavbarStyled from "./Navbar.styled";
 import Dropdown from "react-bootstrap/Dropdown";

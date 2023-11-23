@@ -4,7 +4,7 @@ import HeroLogin from "../Components/HeroLogin/HeroLogin";
 
 const Homepage = () => {
   const data = [
-    { label: "Beranda", url: "homepage" },
+    { label: "Beranda", url: "/homepage" },
     { label: "Tentang Kami", url: "/#tentang-kami" },
     { label: "Program", url: "/pilih-jurusan" },
     { label: "Kontak", url: "/#kontak" },

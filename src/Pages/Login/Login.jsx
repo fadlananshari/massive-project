@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <>
-      {/* <Navbar data={data} /> */}
+      <Navbar data={data} />
       <LoginStyled>
         <div className="bg-login py-5">
           <div className="container">

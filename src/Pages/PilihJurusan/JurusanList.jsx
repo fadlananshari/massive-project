@@ -7,7 +7,7 @@ import Gambar1 from '../../assets/pilih-jurusan/jurusan (6).png';
 
 const JurusanList = [
   { nama: 'Teknik Sepeda Mesin Motor', url: '#', gambar: Gambar1 },
-  { nama: 'Teknik Komputer & Jaringan', url: '#', gambar: Gambar2 },
+  { nama: 'Teknik Komputer & Jaringan', url: '/cari-perusahaan/:id', gambar: Gambar2 },
   { nama: 'Perhotelan', url: '#', gambar: Gambar3 },
   { nama: 'Akuntansi', url: '#', gambar: Gambar4 },
   { nama: 'Farmasi', url: '#', gambar: Gambar5 },
