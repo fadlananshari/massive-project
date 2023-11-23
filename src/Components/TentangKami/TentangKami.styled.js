@@ -6,6 +6,11 @@ const TentangKamiStyled = styled.div`
     padding: 5rem 0;
   }
 
+  .tentang-kami-lgn {
+    background: #fffafa;
+    padding: 5rem 0;
+  }
+
   .text-title {
     color: #1e90ff;
     font-family: Roboto Serif;

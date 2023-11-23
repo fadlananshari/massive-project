@@ -24,6 +24,21 @@ const ProgramStudiStyled = styled.div`
     font-weight: 500;
     line-height: normal;
   }
+
+  // Tujuan Praktik
+  .tujuan-praktik {
+    background: #edf2fb;
+    padding: 5rem 0;
+  }
+
+  .title-tujuan {
+    color: #000;
+    font-family: Roboto Serif;
+    font-size: 2.8125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 `;
 
 export default ProgramStudiStyled;
