@@ -4,12 +4,12 @@ import Img from "../../assets/pilih-jurusan/pilih-jurusan-img.png";
 import Navbar from "../../Components/Navbar/Navbar";
 import JurusanCard from "../../Components/Jurusan/JurusanCard";
 import JurusanList from "./JurusanList";
-import PilihJurusanStyled from "./PilihJurusan.style";
+import PilihJurusanStyled from "./PilihJurusan.styled.js";
 
 const PilihJurusan = () => {
   const data = [
     { label: "Beranda", url: "/homepage" },
-    { label: "Program", url: "/program" },
+    { label: "Program", url: "/pilih-jurusan" },
     { label: "Notifikasi", url: "/notifikasi" },
     { label: "Kegiatanku", url: "/kegiatanku" },
   ];
