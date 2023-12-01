@@ -10,7 +10,7 @@ const VisiMisiWrapper = styled.div`
 
   .card-box h2 {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 2.8125rem;
     font-style: normal;
     font-weight: 600;
@@ -20,7 +20,7 @@ const VisiMisiWrapper = styled.div`
   .card-box p {
     color: #000;
     text-align: center;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -37,7 +37,7 @@ const VisiMisiWrapper = styled.div`
 
     .card-box h2 {
       color: #000;
-      font-family: Roboto Serif;
+      font-family: Poppins;
       font-size: 2.8125rem;
       font-style: normal;
       font-weight: 600;
@@ -47,7 +47,7 @@ const VisiMisiWrapper = styled.div`
     .card-box p {
       color: #000;
       text-align: center;
-      font-family: Roboto Serif;
+      font-family: Poppins;
       font-size: 1rem;
       font-style: normal;
       font-weight: 400;
@@ -65,7 +65,7 @@ const VisiMisiWrapper = styled.div`
 
     .card-box h2 {
       color: #000;
-      font-family: Roboto Serif;
+      font-family: Poppins;
       font-size: 2.8125rem;
       font-style: normal;
       font-weight: 600;
@@ -75,7 +75,7 @@ const VisiMisiWrapper = styled.div`
     .card-box p {
       color: #000;
       text-align: center;
-      font-family: Roboto Serif;
+      font-family: Poppins;
       font-size: 1rem;
       font-style: normal;
       font-weight: 400;

@@ -10,7 +10,7 @@ const TempatPklStyled = styled.div`
 
   .title-tempat {
     color: #1e90ff;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
@@ -19,7 +19,7 @@ const TempatPklStyled = styled.div`
 
   .text-p {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -28,7 +28,7 @@ const TempatPklStyled = styled.div`
 
   .card-title-c {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;
@@ -39,7 +39,7 @@ const TempatPklStyled = styled.div`
 
   .card-text-c {
     color: #7a7676;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -49,7 +49,7 @@ const TempatPklStyled = styled.div`
   }
 
   .text-lihat {
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;

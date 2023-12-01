@@ -13,7 +13,7 @@ const TentangKamiStyled = styled.div`
 
   .text-title {
     color: #1e90ff;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 3.75rem;
     font-style: normal;
     font-weight: 700;
@@ -22,7 +22,7 @@ const TentangKamiStyled = styled.div`
 
   .text-desc {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 2.8125rem;
     font-style: normal;
     font-weight: 600;
@@ -31,7 +31,7 @@ const TentangKamiStyled = styled.div`
 
   .text-p {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;

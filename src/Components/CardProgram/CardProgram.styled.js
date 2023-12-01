@@ -10,7 +10,7 @@ const CardProgramStyled = styled.div`
 
   .card-title {
     color: #121212;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
