@@ -18,7 +18,7 @@ const HeroStyled = styled.div`
   }
 
   .text-title {
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 3rem;
     font-style: normal;
     font-weight: 600;
@@ -27,7 +27,7 @@ const HeroStyled = styled.div`
   }
 
   .text-desc {
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 2rem;
     font-style: normal;
     font-weight: 500;

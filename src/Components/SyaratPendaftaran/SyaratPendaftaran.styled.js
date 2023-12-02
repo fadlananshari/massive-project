@@ -52,7 +52,7 @@ const SyaratPendaftaranStyled = styled.div`
 
   .syarat-pkl .text-wrapper {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -105,7 +105,7 @@ const SyaratPendaftaranStyled = styled.div`
 
   .syarat-pkl .text-wrapper-2 {
     color: #1e90ff;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 3.75rem;
     font-style: normal;
     font-weight: 700;
@@ -114,7 +114,7 @@ const SyaratPendaftaranStyled = styled.div`
 
   .syarat-pkl .text-wrapper-3 {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 2.8125rem;
     font-style: normal;
     font-weight: 600;

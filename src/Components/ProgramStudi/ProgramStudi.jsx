@@ -1,4 +1,3 @@
-import React from "react";
 import ProgramStudiStyled from "./ProgramStudi.styled";
 import CardProgram from "../CardProgram/CardProgram";
 import ImgProgramSatu from "../../assets/program-studi-1.png";

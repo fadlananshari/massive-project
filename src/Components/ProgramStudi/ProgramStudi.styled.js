@@ -9,7 +9,7 @@ const ProgramStudiStyled = styled.div`
 
   .text-title {
     color: #1e90ff;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 3.75rem;
     font-style: normal;
     font-weight: 700;
@@ -18,7 +18,7 @@ const ProgramStudiStyled = styled.div`
 
   .text-desc {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 1.5625rem;
     font-style: normal;
     font-weight: 500;
@@ -33,7 +33,7 @@ const ProgramStudiStyled = styled.div`
 
   .title-tujuan {
     color: #000;
-    font-family: Roboto Serif;
+    font-family: Poppins;
     font-size: 2.8125rem;
     font-style: normal;
     font-weight: 600;

@@ -8,7 +8,7 @@ const ContactStyled = styled.div`
   }
   .text-title {
     color: #1e90ff;
-    font-family: "Roboto", serif;
+    font-family: Poppins;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0;
@@ -18,7 +18,7 @@ const ContactStyled = styled.div`
 
   .text-p {
     color: #000000;
-    font-family: "Roboto", serif;
+    font-family: Poppins;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0;
@@ -39,7 +39,7 @@ const ContactStyled = styled.div`
   @media (min-width: 992px) {
     .text-title {
       color: #1e90ff;
-      font-family: "Roboto", serif;
+      font-family: Poppins;
       font-size: 60px;
       font-weight: 700;
       letter-spacing: 0;
@@ -48,7 +48,7 @@ const ContactStyled = styled.div`
     }
     .text-p {
       color: #000000;
-      font-family: "Roboto", serif;
+      font-family: Poppins;
       font-size: 25px;
       font-weight: 500;
       letter-spacing: 0;
