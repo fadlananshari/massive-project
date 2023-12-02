@@ -9,6 +9,9 @@ import CariPerusahaan from "./Pages/CariPerusahaan/CariPerusahaan";
 import FormDaftar1 from "./Pages/FormDaftar/FormDaftar1";
 import FormDaftar2 from "./Pages/FormDaftar/FormDaftar2";
 import DetailPerusahaan from "./Pages/DetailPerusahaan/DetailPerusahaan";
+import FormRegist1 from "./Pages/formregister1";
+import FormRegist2 from "./Pages/formregister2";
+import Statusregister from "./Pages/status_register";
 
 function App() {
   return (
@@ -23,6 +26,10 @@ function App() {
         <Route path="/detail-perusahaan/:id" element={<DetailPerusahaan />} />
         <Route path="/pendaftaran/1" element={<FormDaftar1 />} />
         <Route path="/pendaftaran/2" element={<FormDaftar2 />} />
+
+        {/* <Route path="/" element={<FormRegist1 />}></Route> */}
+        {/* <Route path="/" element={<FormRegist2 />}></Route> */}
+        <Route path="/status-register" element={<Statusregister />}></Route>
       </Routes>
       <Footer />
     </Router>
