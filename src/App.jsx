@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
-import Home from "./Pages/Home";
-import Login from "./Pages/Login/Login";
-import PilihJurusan from "./Pages/PilihJurusan/PilihJurusan";
-import Homepage from "./Pages/Homepage";
-import CariPerusahaan from "./Pages/CariPerusahaan/CariPerusahaan";
-import FormDaftar1 from "./Pages/FormDaftar/FormDaftar1";
-import FormDaftar2 from "./Pages/FormDaftar/FormDaftar2";
-import DetailPerusahaan from "./Pages/DetailPerusahaan/DetailPerusahaan";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
+import Home from './Pages/Home';
+import Login from './Pages/Login/Login';
+import PilihJurusan from './Pages/PilihJurusan/PilihJurusan';
+import Homepage from './Pages/Homepage';
+import CariPerusahaan from './Pages/CariPerusahaan/CariPerusahaan';
+import FormDaftar1 from './Pages/FormDaftar/FormDaftar1';
+import FormDaftar2 from './Pages/FormDaftar/FormDaftar2';
+import DetailPerusahaan from './Pages/DetailPerusahaan/DetailPerusahaan';
+import Profile from './Pages/Profile/Profile';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/detail-perusahaan/:id" element={<DetailPerusahaan />} />
         <Route path="/pendaftaran/1" element={<FormDaftar1 />} />
         <Route path="/pendaftaran/2" element={<FormDaftar2 />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </Router>
