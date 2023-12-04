@@ -12,6 +12,7 @@ import DetailPerusahaan from "./Pages/DetailPerusahaan/DetailPerusahaan";
 import FormRegist1 from "./Pages/formregister1";
 import FormRegist2 from "./Pages/formregister2";
 import Statusregister from "./Pages/status_register";
+import Laporan from "./Pages/Laporan/Laporan";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/detail-perusahaan/:id" element={<DetailPerusahaan />} />
         <Route path="/pendaftaran/1" element={<FormDaftar1 />} />
         <Route path="/pendaftaran/2" element={<FormDaftar2 />} />
+        <Route path="/laporan" element={<Laporan />} />
 
         {/* <Route path="/" element={<FormRegist1 />}></Route> */}
         {/* <Route path="/" element={<FormRegist2 />}></Route> */}

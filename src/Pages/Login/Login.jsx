@@ -10,12 +10,12 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [password, setPassword] = useState(false);
-  const data = [
-    { label: "Beranda", url: "/" },
-    { label: "Tentang Kami", url: "/#Tentang" },
-    { label: "Program", url: "/#program" },
-    { label: "Kontak", url: "/#Kontak" },
-  ];
+  // const data = [
+  //   { label: "Beranda", url: "/" },
+  //   { label: "Tentang Kami", url: "/#Tentang" },
+  //   { label: "Program", url: "/#program" },
+  //   { label: "Kontak", url: "/#Kontak" },
+  // ];
 
   const navigate = useNavigate();
   const goHomepage = () => {
@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <>
-      <Navbar data={data} />
+      {/* <Navbar data={data} /> */}
       <LoginStyled>
         <div className="bg-login py-5">
           <div className="container">

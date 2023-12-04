@@ -11,9 +11,9 @@ const Homepage = () => {
     { label: "Beranda", url: "/homepage" },
     { label: "Tentang Kami", url: "/#tentang-kami" },
     { label: "Program", url: "/pilih-jurusan" },
-    { label: "Kontak", url: "/#kontak" },
+    { label: "Kontak", url: "/#kontak-login" },
     { label: "Notifikasi", url: "/#notifikasi" },
-    { label: "Kegiatanku", url: "/#kegiatanku" },
+    { label: "Kegiatanku", url: "/status-register" },
   ];
 
   return (
