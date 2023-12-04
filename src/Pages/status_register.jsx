@@ -86,7 +86,6 @@ const Statusregister = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </LaporanStyled>
   );
 };
