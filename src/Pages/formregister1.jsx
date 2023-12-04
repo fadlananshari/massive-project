@@ -11,12 +11,9 @@ const FormRegist1 = () => {
         <>
             <Navbar />
 
-                <div className="form p-5" style={{ background: '#DCE8FF'}}>
+                <div className="form-container p-5" style={{ background: '#DCE8FF', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
                     <form className="form bg-white p-5 mt-5" style={{borderRadius: '10px'}}>
-                        <div className="img text-center">
-                            <img src={img_form} alt="" className="img-fluid" style={{ borderRadius: '10px' }} />
-                        </div>
-                        <img src="" alt="" />
+                    <img src={img_form} alt="" className="img-fluid mb-5" style={{ borderRadius: '10px' }} />
                         <div className="text-center mb-5">
                             <h2 className="text-primary">Formulir Pendaftaran</h2>
                             <h5>Praktik Kerja Lapangan</h5>

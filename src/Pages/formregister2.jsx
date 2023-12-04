@@ -77,12 +77,24 @@ const FormRegist2 = () => {
                             <input type="radio" className="form-check-input" id="exampleCheck1" />
                             <label className="form-check-label" for="exampleCheck1">Formulir ini Benar dan Selesai</label>
                         </div>
-                        <div className="row float-end">
-                            <div className="col">
-                                <button type="sebelumnya" className="btn btn-outline-primary float-end">Sebelumnya</button>
+                        <div className="row">
+                            <div className="button_users mt-5 d-flex justify-content-center">
+                                <button type="button" class="btn btn-outline-primary m-3">Sebelumnya</button>
+                                <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#popup_daftar">Daftar</button>
                             </div>
-                            <div className="col">
-                                <button type="submit" className="btn btn-primary float-start">Daftar</button> 
+
+                            <div class="modal fade" id="popup_daftar" tabindex="-1" aria-labelledby="popup_keluar" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <h3 className="title">Pemberitahuan</h3>
+                                    selamat! anda telah berhasil mendaftar
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Status Pendaftaran</button>
+                                </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </form>
