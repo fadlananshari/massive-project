@@ -49,7 +49,7 @@ const Login = () => {
                 </div>
                 <h1 className="login fw-bold">Login</h1>
                 <h5 className="fw-bold">
-                  Belum punya akun?<a className="daftar">Daftar sekarang</a>
+                  Belum punya akun?<a href="/register" className="daftar">Daftar sekarang</a>
                 </h5>
                 <form>
                   <div class="form-floating mb-3">

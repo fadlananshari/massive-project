@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LoginStyled = styled.div`
+const SignUpStyled = styled.div`
 
   .bg-login {
     background-color: #e3edff;
@@ -43,6 +43,10 @@ const LoginStyled = styled.div`
   .bottom {
     margin-top: auto !important;
   }
+
+  .width-max-content {
+    width: max-content;
+  }
 `;
 
-export default LoginStyled;
+export default SignUpStyled;

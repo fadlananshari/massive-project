@@ -1,15 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home';
 import Login from './Pages/Login/Login';
 import PilihJurusan from './Pages/PilihJurusan/PilihJurusan';
 import Homepage from './Pages/Homepage';
+import Profile from './Pages/Profile/Profile';
 import CariPerusahaan from './Pages/CariPerusahaan/CariPerusahaan';
 import FormDaftar1 from './Pages/FormDaftar/FormDaftar1';
 import FormDaftar2 from './Pages/FormDaftar/FormDaftar2';
 import DetailPerusahaan from './Pages/DetailPerusahaan/DetailPerusahaan';
-import Profile from './Pages/Profile/Profile';
+import Notifikasi from './Pages/Notifikasi';
+import StatusPendaftaran from './Pages/StatusPendaftaran';
+import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<SignUp />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/pilih-jurusan" element={<PilihJurusan />} />
         <Route path="/cari-perusahaan/:id" element={<CariPerusahaan />} />
@@ -25,6 +28,9 @@ function App() {
         <Route path="/pendaftaran/1" element={<FormDaftar1 />} />
         <Route path="/pendaftaran/2" element={<FormDaftar2 />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/kegiatanku" element={<Kegiatanku />} />
+        <Route path="/detail-status-pendaftaran/:id" element={<StatusPendaftaran />} />
+        <Route path="/notifikasi" element={<Notifikasi />} />
       </Routes>
       <Footer />
     </Router>
