@@ -9,10 +9,10 @@ import Contact from "../Components/Contact/Contact";
 const Homepage = () => {
   const data = [
     { label: "Beranda", url: "/homepage" },
-    { label: "Tentang Kami", url: "/#tentang-kami" },
+    { label: "Tentang Kami", url: "/homepage/#tentang-kami" },
     { label: "Program", url: "/pilih-jurusan" },
-    { label: "Kontak", url: "/#kontak-login" },
-    { label: "Notifikasi", url: "/#notifikasi" },
+    { label: "Kontak", url: "/homepage/#kontak" },
+    { label: "Notifikasi", url: "/notifikasi" },
     { label: "Kegiatanku", url: "/status-register" },
   ];
 

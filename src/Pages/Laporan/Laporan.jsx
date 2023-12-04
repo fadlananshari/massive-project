@@ -3,6 +3,9 @@ import Navbar from "../../Components/Navbar/Navbar";
 import LaporanStyled from "./Laporan.styled";
 import imgAuliaComp from "../../assets/laporan/aulia-comp.png";
 import imgLaporanHarian from "../../assets/laporan/laporan-harian.png";
+import { FaCloudUploadAlt } from "react-icons/fa";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+import PopUpConfirm from "../../Components/Popup/PopUpConfirm";
 
 const Laporan = () => {
   const data = [
@@ -37,9 +40,9 @@ const Laporan = () => {
       </div>
       <div className="container">
         <div className="d-flex flex-column">
-          <button className="btn btn-lg btn-primary mb-3 fs-2 fw-semibold">
+          <div className="btn-custom btn-lg btn-primary mb-3 fs-2 fw-semibold">
             Buat Laporan Anda
-          </button>
+          </div>
         </div>
         <div className="d-flex flex-row grid gap-3">
           <div className="row-coloum col-3">
@@ -70,7 +73,11 @@ const Laporan = () => {
                     <span className="fw-semibold"> Belum Lengkap</span>
                   </p>
                   <div className="d-flex justify-content-center">
-                    <button className="btn btn-primary px-4 fw-semibold">
+                    <button
+                      className="btn btn-primary px-4 fw-semibold"
+                      data-bs-toggle="modal"
+                      data-bs-target="#weekModal"
+                    >
                       Buat Laporan!
                     </button>
                   </div>
@@ -85,23 +92,28 @@ const Laporan = () => {
                   <h5 className="card-title fw-bold">Status Laporan :</h5>
                   {/* Minggu 1 */}
                   <div className="card mb-3">
-                    <div className="card-body">
-                      <h5 className="card-title fw-semibold mb-2">
-                        Laporan Minggu Ke-1
-                      </h5>
-                      <p
-                        className="card-text mb-2"
-                        style={{ fontSize: "0.875rem" }}
-                      >
-                        13-17 November 2023
-                      </p>
-                      <p
-                        className="card-text text-end fw-semibold"
-                        style={{ color: "#1E90FF" }}
-                      >
-                        Setujui
-                      </p>
-                    </div>
+                    <Link
+                      to="/detail-laporan/1"
+                      className="text-decoration-none text-dark"
+                    >
+                      <div className="card-body">
+                        <h5 className="card-title fw-semibold mb-2">
+                          Laporan Minggu Ke-1
+                        </h5>
+                        <p
+                          className="card-text mb-2"
+                          style={{ fontSize: "0.875rem" }}
+                        >
+                          13-17 November 2023
+                        </p>
+                        <p
+                          className="card-text text-end fw-semibold"
+                          style={{ color: "#1E90FF" }}
+                        >
+                          Setujui
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                   {/* Minggu 2 */}
                   <div className="card mb-3">
@@ -198,7 +210,11 @@ const Laporan = () => {
                   </p>
 
                   <div className="d-flex justify-content-center">
-                    <button className="btn btn-primary px-4 fw-semibold">
+                    <button
+                      className="btn btn-primary px-4 fw-semibold"
+                      data-bs-toggle="modal"
+                      data-bs-target="#finalModal"
+                    >
                       Unggah Laporan
                     </button>
                   </div>
@@ -257,10 +273,18 @@ const Laporan = () => {
                         Apakah kamu mengikuti kegiatan PKL hari ini?
                       </h6>
                       <div className="d-flex justify-content-center">
-                        <button className="btn btn-primary px-4 fw-semibold me-3">
+                        <button
+                          className="btn btn-primary px-4 fw-semibold me-3"
+                          data-bs-toggle="modal"
+                          data-bs-target="#presentModal"
+                        >
                           Hadir
                         </button>
-                        <button className="btn btn-danger px-4 fw-semibold">
+                        <button
+                          className="btn btn-danger px-4 fw-semibold"
+                          data-bs-toggle="modal"
+                          data-bs-target="#absentModal"
+                        >
                           Tidak Hadir
                         </button>
                       </div>
@@ -416,6 +440,228 @@ const Laporan = () => {
               </div>
             </div>
           </div>
+
+          <div
+            className="modal fade"
+            id="presentModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabIndex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content" style={{ background: "#DCE8FF" }}>
+                <div className="modal-body">
+                  <button className="border-0" data-bs-dismiss="modal">
+                    <FaArrowAltCircleLeft
+                      size={30}
+                      className="text-primary m-0"
+                    />
+                  </button>
+
+                  <h5 className="text-center font-poppins fw-semibold mb-3">
+                    Selasa, 14 November 2023
+                  </h5>
+                  <textarea
+                    className="border-0 rounded-4 p-3"
+                    placeholder="Deskripsikan hasil belajarmu!"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    style={{ width: "100%", height: "150px" }}
+                  ></textarea>
+                  <div className="bg-white rounded-4 text-center pt-4 pb-1 mt-2 mb-3">
+                    <FaCloudUploadAlt size={50} className="text-primary" />
+                    <p>Unggah Gambar</p>
+                  </div>
+
+                  <div className="d-flex justify-content-center">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#confirm"
+                    >
+                      Selesai
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="modal fade"
+            id="absentModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabIndex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content" style={{ background: "#DCE8FF" }}>
+                <div className="modal-body">
+                  <button className="border-0" data-bs-dismiss="modal">
+                    <FaArrowAltCircleLeft
+                      size={30}
+                      className="text-primary m-0"
+                    />
+                  </button>
+
+                  <h5 className="text-center font-poppins fw-semibold mb-3">
+                    Selasa, 14 November 2023
+                  </h5>
+                  <p className="m-0 fw-bold">Keterangan:</p>
+                  <small className="text-secondary">
+                    Sakit, Izin dan lain sebagainya
+                  </small>
+                  <input
+                    type="text"
+                    className="rounded border-0 py-2 px-3"
+                    placeholder="Keterangan"
+                    style={{ width: "100%" }}
+                  />
+                  <p className="m-0 mt-2 fw-bold">Bukti keterangan</p>
+                  <small className="text-secondary">
+                    Surat dokter, screnshoot izin, dan lain sebagainya.
+                  </small>
+                  <div className="bg-white rounded-4 text-center pt-4 pb-1 mt-2">
+                    <FaCloudUploadAlt size={50} className="text-primary" />
+                    <p>Unggah Gambar</p>
+                  </div>
+                  <small className="text-secondary">
+                    NB: jika bukti keterangan tidak jelas maka dianggap alfa
+                  </small>
+                  <div className="d-flex justify-content-center mt-3">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#confirm"
+                    >
+                      Selesai
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="modal fade"
+            id="weekModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabIndex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content" style={{ background: "#DCE8FF" }}>
+                <div className="modal-body">
+                  <button className="border-0" data-bs-dismiss="modal">
+                    <FaArrowAltCircleLeft
+                      size={30}
+                      className="text-primary m-0"
+                    />
+                  </button>
+
+                  <h5 className="text-center font-poppins fw-semibold">
+                    Minggu ke - 1 (14 - 21 November 2023)
+                  </h5>
+                  <small className="text-danger fst-italic">
+                    Terdiri dari 100 - 150 kata
+                  </small>
+                  <textarea
+                    className="border-0 rounded-4 p-3"
+                    placeholder="Deskripsikan hasil belajarmu!"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    style={{ width: "100%", height: "300px" }}
+                  ></textarea>
+
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexCheckDefault"
+                    >
+                      Laporan ini benar-benar dibuat oleh saudara/i dapat
+                      dipertanggungjawabkan kebenarannya..
+                    </label>
+                  </div>
+                  <div className="d-flex justify-content-center mt-3">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#confirm"
+                    >
+                      Selesai
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="modal fade"
+            id="finalModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabIndex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content" style={{ background: "#DCE8FF" }}>
+                <div className="modal-body">
+                  <button className="border-0" data-bs-dismiss="modal">
+                    <FaArrowAltCircleLeft
+                      size={30}
+                      className="text-primary m-0"
+                    />
+                  </button>
+                  <p className="mt-2 mb-0">
+                    Unggah file laporan akhir kamu disini
+                  </p>
+                  <div className="bg-white rounded-4 text-center pt-4 pb-1 mt-2 mb-3">
+                    <FaCloudUploadAlt size={50} className="text-primary" />
+                    <p>Unggah File</p>
+                  </div>
+
+                  <div className="d-flex justify-content-center">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#confirm"
+                    >
+                      Selesai
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <PopUpConfirm
+            id="confirm"
+            desc="Anda ingin mengirim laporan anda?"
+            btn1={{ cName: "btn-danger", url: "#", text: "Batal" }}
+            btn2={{ cName: "btn-primary", url: "#", text: "Kirim" }}
+          />
         </div>
       </div>
     </LaporanStyled>

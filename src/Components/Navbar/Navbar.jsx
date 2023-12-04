@@ -55,7 +55,7 @@ const Navbar = ({ data, login, profile }) => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Profil</Dropdown.Item>
+                <Dropdown.Item href="/profile">Profil</Dropdown.Item>
                 <Dropdown.Item href="/">Keluar</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
