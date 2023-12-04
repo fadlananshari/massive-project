@@ -13,7 +13,7 @@ const Homepage = () => {
     { label: "Program", url: "/pilih-jurusan" },
     { label: "Kontak", url: "/homepage/#kontak" },
     { label: "Notifikasi", url: "/notifikasi" },
-    { label: "Kegiatanku", url: "/kegiatanku" },
+    { label: "Kegiatanku", url: "/status-register" },
   ];
 
   return (

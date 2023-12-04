@@ -13,7 +13,7 @@ const Notifikasi = () => {
     { label: 'Beranda', url: '/homepage' },
     { label: 'Program', url: '/pilih-jurusan' },
     { label: 'Notifikasi', url: '/notifikasi' },
-    { label: 'Kegiatanku', url: '/kegiatanku' },
+    { label: 'Kegiatanku', url: '/status-register' },
   ];
   return (
     <>

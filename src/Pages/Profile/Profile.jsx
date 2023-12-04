@@ -2,14 +2,14 @@ import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import Profil from '../../assets/profil.png';
 import ProfileStyled from './Profile.styled';
-import Modal from '../../Components/Modals/Modal';
+import PopUpConfirm from '../../Components/Popup/PopUpConfirm';
 
 const Profile = () => {
   const data = [
     { label: 'Beranda', url: '/homepage' },
     { label: 'Program', url: '/pilih-jurusan' },
     { label: 'Notifikasi', url: '/notifikasi' },
-    { label: 'Kegiatanku', url: '/kegiatanku' },
+    { label: 'Kegiatanku', url: '/status-register' },
   ];
   return (
     <ProfileStyled>
@@ -78,11 +78,11 @@ const Profile = () => {
                     </div>
                   </div>
                   <div className="m-0 mt-5 d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutConfirm">
                       Keluar
                     </button>
                   </div>
-                  <Modal />
+                  <PopUpConfirm id="logoutConfirm" desc="Anda ingin keluar akun?" btn1={{ cName: 'btn-primary', url: '#', text: 'Batal' }} btn2={{ cName: 'btn-danger', url: '/', text: 'Keluar' }} />
                 </div>
               </div>
             </div>

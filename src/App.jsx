@@ -12,6 +12,8 @@ import DetailPerusahaan from './Pages/DetailPerusahaan/DetailPerusahaan';
 import Notifikasi from './Pages/Notifikasi';
 import StatusPendaftaran from './Pages/StatusPendaftaran';
 import SignUp from './Pages/SignUp/SignUp';
+import Statusregister from './Pages/status_register';
+import Laporan from './Pages/Laporan/Laporan';
 
 function App() {
   return (
@@ -27,8 +29,9 @@ function App() {
         <Route path="/detail-perusahaan/:id" element={<DetailPerusahaan />} />
         <Route path="/pendaftaran/1" element={<FormDaftar1 />} />
         <Route path="/pendaftaran/2" element={<FormDaftar2 />} />
+        <Route path="/status-register" element={<Statusregister />} />
+        <Route path="/laporan" element={<Laporan />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/kegiatanku" element={<Kegiatanku />} />
         <Route path="/detail-status-pendaftaran/:id" element={<StatusPendaftaran />} />
         <Route path="/notifikasi" element={<Notifikasi />} />
       </Routes>
