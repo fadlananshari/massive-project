@@ -1,13 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const NavbarStyled = styled.div`
+  * {
+    font-family: "Poppins";
+  }
+
   .background-custom {
     background: #1e90ff;
   }
 
   .text-nav {
     color: #fff;
-    font-family: Roboto Serif;
+
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
@@ -17,7 +21,6 @@ const NavbarStyled = styled.div`
   .text-btn-login {
     color: #111;
     background: #fff;
-    font-family: Roboto Serif;
     width: 6rem;
     font-size: 1rem;
     font-style: normal;
