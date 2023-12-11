@@ -1,10 +1,10 @@
-import Gambar1 from '../../assets/perusahaan/service-komputer.png';
-import Gambar2 from '../../assets/perusahaan/service&store-komputer.png';
-import Gambar3 from '../../assets/perusahaan/service-komputer&printer.png';
-import Gambar4 from '../../assets/perusahaan/service&store-komputer2.png';
-import Gambar5 from '../../assets/perusahaan/service-komputer&printer2.png';
-import Gambar6 from '../../assets/perusahaan/service&store-komputer3.png';
-import Gambar7 from '../../assets/perusahaan/service-komputer.png';
+import Gambar1 from '../../../assets/perusahaan/service-komputer.png';
+import Gambar2 from '../../../assets/perusahaan/service&store-komputer.png';
+import Gambar3 from '../../../assets/perusahaan/service-komputer&printer.png';
+import Gambar4 from '../../../assets/perusahaan/service&store-komputer2.png';
+import Gambar5 from '../../../assets/perusahaan/service-komputer&printer2.png';
+import Gambar6 from '../../../assets/perusahaan/service&store-komputer3.png';
+import Gambar7 from '../../../assets/perusahaan/service-komputer.png';
 
 const PerusahanList = [
   { nama: 'Service Komputer', tempat: 'Aulia Computer', lokasi: 'Griya abadi  - bangkalan', url: ['/pendaftaran/1','/detail-perusahaan/:id'], gambar: Gambar1 },

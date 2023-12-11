@@ -1,12 +1,12 @@
 import React from "react";
-import JurusanCarousel from "../../Components/Jurusan/JurusanCarousel";
-import Img2 from "../../assets/perusahaan/gambar2.png";
-import Img1 from "../../assets/perusahaan/gambar1.png";
-import Navbar from "../../Components/Navbar/Navbar";
-import PerusahaanCard from "../../Components/Perusahaan/PerusahaanCard";
+import JurusanCarousel from "../../../Components/Jurusan/JurusanCarousel";
+import Img2 from "../../../assets/perusahaan/gambar2.png";
+import Img1 from "../../../assets/perusahaan/gambar1.png";
+import Navbar from "../../../Components/Navbar/Navbar";
+import PerusahaanCard from "../../../Components/Perusahaan/PerusahaanCard";
 import PerusahanList from "./PerusahaanList";
 import CariPerusahaan_adminStyled from "./CariPerusahaan_admin.style";
-import PerusahaanCard_admin from "../../Components/Perusahaan/PerusahaanCard_admin";
+import PerusahaanCard_admin from "../../../Components/Perusahaan/PerusahaanCard_admin";
 import { Link } from "react-router-dom";
 
 const CariPerusahaanadmin = () => {

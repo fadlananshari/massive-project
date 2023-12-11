@@ -2,15 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Navbar from "../../Components/Navbar/Navbar";
-import img_form from "../../assets/img_form.jpeg";
+import Navbar from "../../../Components/Navbar/Navbar";
+import img_form from "../../../assets/img_form.jpeg";
 import TambahPerusahaanStyled from "./TambahPerusahaan.styled";
-import img_addpt from "../../assets/foto-profile-perusahaan.jpeg";
-import img_FPP1 from "../../assets/FPP-1.jpeg";
-import img_FPP2 from "../../assets/FPP-2.jpeg";
-import img_FPP3 from "../../assets/FPP-3.jpeg";
-import img_FPP4 from "../../assets/FPP-4.jpeg";
-import DatePicker from "react-datepicker";
+import img_addpt from "../../../assets/foto-profile-perusahaan.jpeg";
+import img_FPP1 from "../../../assets/FPP-1.jpeg";
+import img_FPP2 from "../../../assets/FPP-2.jpeg";
+import img_FPP3 from "../../../assets/FPP-3.jpeg";
+import img_FPP4 from "../../../assets/FPP-4.jpeg";
 
 const Addperusahaan = () => {
   const data = [

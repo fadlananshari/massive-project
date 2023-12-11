@@ -19,7 +19,16 @@ import PublicRoutes from './PublicRoutes';
 import AuthRoutes from './AuthRoutes';
 import NotFound from '../Pages/NotFound';
 
+// admin
+import CariPerusahaanadmin from '../Pages/Admin/CariPerusahaanadmin/CariPerusahaanadmin';
+import Kegiatansiswa from '../Pages/Admin/Kegiatansiswa/Kegiatansiswa';
+import Addperusahaan from '../Pages/Admin/TambahPerusahaan/TambahPerusahaan';
+import LoginAdmin from '../Pages/Admin/LoginAdmin';
+
 const Routing = () => {
+  const adminToken = localStorage.getItem('AdminAuthorize');
+  const isAdminLoggin = adminToken === null ? false : true;
+
   const token = localStorage.getItem('Authorize');
   const isLoggin = token === null ? false : true;
 
@@ -27,22 +36,21 @@ const Routing = () => {
 
   return (
     <>
-    <Routes>
+      <Routes>
         {/* public routes */}
-        <Route
-          path=""
-          element={<PublicRoutes isLoggin={isLoggin} setShowFooter={setShowFooter} />}
-        >
+        <Route path="" element={<PublicRoutes isLoggin={isLoggin} setShowFooter={setShowFooter} />}>
           <Route path="" element={<Home />} />
-          <Route path="/login" element={<Login setShowFooter={() => setShowFooter(false)}/>} />
-          <Route path="/register" element={<SignUp setShowFooter={() => setShowFooter(false)}/>} />
+          <Route path="/login-admin" element={<LoginAdmin setShowFooter={() => setShowFooter(false)} />} />
+          <Route path="/login" element={<Login setShowFooter={() => setShowFooter(false)} />} />
+          <Route path="/register" element={<SignUp setShowFooter={() => setShowFooter(false)} />} />
         </Route>
 
         {/* private routes */}
-        <Route
-          path=""
-          element={<AuthRoutes isLoggin={isLoggin} setShowFooter={setShowFooter} />}
-        >
+        <Route path="" element={<AuthRoutes isLoggin={isLoggin} setShowFooter={setShowFooter} />}>
+          <Route path="admin" element={<CariPerusahaanadmin />} />
+          <Route path="tambah-perusahaan" element={<Addperusahaan />} />
+          <Route path="Kegiatan-siswa-admin" element={<Kegiatansiswa />} />
+
           <Route path="homepage" element={<Homepage />} />
           <Route path="pilih-jurusan" element={<PilihJurusan />} />
           <Route path="cari-perusahaan/:id" element={<CariPerusahaan />} />

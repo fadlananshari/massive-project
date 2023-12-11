@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
-import Navbar from '../../Components/Navbar/Navbar';
+import Navbar from '../../../Components/Navbar/Navbar';
 import KegiatansiswaStyled from './Kegiatansiswwa.styled';
 
 const Kegiatansiswa = () => {
