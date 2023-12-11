@@ -14,13 +14,10 @@ import StatusPendaftaran from "./Pages/StatusPendaftaran";
 import SignUp from "./Pages/SignUp/SignUp";
 import Statusregister from "./Pages/status_register";
 import Laporan from "./Pages/Laporan/Laporan";
-<<<<<<< HEAD
 import CariPerusahaanadmin from "./Pages/CariPerusahaanadmin/CariPerusahaanadmin";
 import Addperusahaan from "./Pages/TambahPerusahaan/TambahPerusahaan";
 import Kegiatansiswa from "./Pages/Kegiatansiswa/Kegiatansiswa";
-=======
 import DetailLaporan from "./Pages/Laporan/DetailLaporan";
->>>>>>> 2254fdd54d015636a956ffe3a904a0b4f4031c2a
 
 function App() {
   return (
@@ -33,19 +30,20 @@ function App() {
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/pilih-jurusan" element={<PilihJurusan />} />
         <Route path="/cari-perusahaan/:id" element={<CariPerusahaan />} />
-        <Route path="/cari-perusahaan-admin/:id" element={<CariPerusahaanadmin />}></Route>
+        <Route
+          path="/cari-perusahaan-admin/:id"
+          element={<CariPerusahaanadmin />}
+        ></Route>
         <Route path="/detail-perusahaan/:id" element={<DetailPerusahaan />} />
         <Route path="/pendaftaran/1" element={<FormDaftar1 />} />
         <Route path="/pendaftaran/2" element={<FormDaftar2 />} />
         <Route path="/status-register" element={<Statusregister />} />
         <Route path="/laporan" element={<Laporan />} />
-<<<<<<< HEAD
-        <Route path="/" element={<FormRegist1 />}></Route>
-        <Route path="/" element={<FormRegist2 />}></Route>
-        <Route path="/status-register" element={<Statusregister />}></Route>
-        <Route path="/tambah-perusahaan" element={<Addperusahaan />}></Route>
-        <Route path="/Kegiatan-siswa-admin" element={<Kegiatansiswa />}></Route>
-=======
+        {/* <Route path="/" element={<FormRegist1 />}></Route>
+        <Route path="/" element={<FormRegist2 />}></Route> */}
+        <Route path="/status-register" element={<Statusregister />} />
+        <Route path="/tambah-perusahaan" element={<Addperusahaan />} />
+        <Route path="/Kegiatan-siswa-admin" element={<Kegiatansiswa />} />
         <Route path="/detail-laporan/:id" element={<DetailLaporan />} />
         <Route path="/profile" element={<Profile />} />
         <Route
@@ -53,7 +51,6 @@ function App() {
           element={<StatusPendaftaran />}
         />
         <Route path="/notifikasi" element={<Notifikasi />} />
->>>>>>> 2254fdd54d015636a956ffe3a904a0b4f4031c2a
       </Routes>
       <Footer />
     </Router>
