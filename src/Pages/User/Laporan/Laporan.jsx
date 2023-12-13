@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../../Components/Navbar/Navbar';
 import LaporanStyled from './Laporan.styled';
@@ -6,14 +7,41 @@ import imgLaporanHarian from '../../../assets/laporan/laporan-harian.png';
 import { FaCloudUploadAlt } from 'react-icons/fa';
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import PopUpConfirm from '../../../Components/Popup/PopUpConfirm';
+import axios from 'axios';
 
-const Laporan = () => {
+const Laporan = ({id}) => {
+  const [laporan, setLaporan] = useState();
+  const [idUser, setIdUser] = useState();
+  const token = localStorage.getItem('Authorize');
+  const fetchUserData = async () => {
+    try {
+      const idUser = await axios.get(`http://localhost:4000/api/v1/decode-token/${token}`);
+      const laporanByIdUser = await axios.get(`http://localhost:4000/api/v1/laporan/${idUser.data.data.userId}`);
+      setLaporan(laporanByIdUser.data.data);
+      setIdUser(idUser.data.data.userId);
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchUserData();
+    // postData();
+  }, []);
+
   const data = [
     { label: 'Beranda', url: '/homepage' },
     { label: 'Program', url: '/pilih-jurusan' },
     { label: 'Notifikasi', url: '/notifikasi' },
     { label: 'Kegiatanku', url: '/status-register' },
   ];
+  
+
+  const [inputLaporanValue, setInputLaporanValue] = useState('');
+
+  const laporanOnchange = (event) => {
+    setInputLaporanValue(event.target.value);
+  };
 
   return (
     <LaporanStyled>
@@ -21,7 +49,6 @@ const Laporan = () => {
       <div className="card mt-5 mb-3 pt-3 bg-shadow">
         <div className="card-body">
           <h1 className="card-title text-center fw-bold mb-4 text-blue">Kegiatanku</h1>
-
           <div className="d-flex justify-content-center">
             <Link to="/laporan">
               <button type="submit" className="btn btn-primary me-4">
@@ -77,7 +104,7 @@ const Laporan = () => {
                 <div className="card-body">
                   <h5 className="card-title fw-bold">Status Laporan :</h5>
                   {/* Minggu 1 */}
-                  <div className="card mb-3">
+                  <a href='detail-laporan' className="card mb-3 text-decoration-none">
                     <div className="card-body">
                       <h5 className="card-title fw-semibold mb-2">Laporan Minggu Ke-1</h5>
                       <p className="card-text mb-2" style={{ fontSize: '0.875rem' }}>
@@ -87,7 +114,7 @@ const Laporan = () => {
                         Setujui
                       </p>
                     </div>
-                  </div>
+                  </a>
                   {/* Minggu 2 */}
                   <div className="card mb-3">
                     <div className="card-body">
@@ -148,7 +175,9 @@ const Laporan = () => {
                   <p className="card-text">Laporan Mingguan dapat dibuat jika sudah mengisi laporan harian secara lengkap!</p>
 
                   <div className="d-flex justify-content-center">
-                    <button className="btn btn-primary px-4 fw-semibold" data-bs-toggle="modal" data-bs-target="#finalModal">Unggah Laporan</button>
+                    <button className="btn btn-primary px-4 fw-semibold" data-bs-toggle="modal" data-bs-target="#finalModal">
+                      Unggah Laporan
+                    </button>
                   </div>
                 </div>
               </div>
@@ -165,19 +194,30 @@ const Laporan = () => {
                   <div className="card mb-4">
                     <div className="card-body">
                       <h6 className="card-title fw-bold text-blue mb-0">Senin, 13 November 2023</h6>
-                      <div className="row g-0">
-                        <div className="col-md-8">
-                          <div className="card-body">
-                            <p className="card-text text-justify">
-                              Mempelajari mengenai apa itu UI/UX secara lebih detail, memberikan pengertian mengenai macam-macam framework, dan memberikan bagaimana cara untuk melakukan research orginizer agar produk layanan yang kita buat
-                              tepat sasaran dan mudah digunakan oleh user.
-                            </p>
+                      {laporan && laporan[0] ? (
+                        <div className="row g-0">
+                          <div className="col-md-8">
+                            <div className="card-body">
+                              <p className="card-text text-justify">{laporan[0].aktifitas_h}</p>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <img src={imgLaporanHarian} alt="" className="img-fluid rounded-3" />
                           </div>
                         </div>
-                        <div className="col-md-4">
-                          <img src={imgLaporanHarian} alt="" className="img-fluid rounded-3" />
-                        </div>
-                      </div>
+                      ) : (
+                        <>
+                          <h6 className="card-text text-center fw-bold">Apakah kamu mengikuti kegiatan PKL hari ini?</h6>
+                          <div className="d-flex justify-content-center">
+                            <button className="btn btn-primary px-4 fw-semibold me-3" data-bs-toggle="modal" data-bs-target="#presentModal">
+                              Hadir
+                            </button>
+                            <button className="btn btn-danger px-4 fw-semibold" data-bs-toggle="modal" data-bs-target="#absentModal">
+                              Tidak Hadir
+                            </button>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
 
@@ -185,15 +225,30 @@ const Laporan = () => {
                   <div className="card mb-4">
                     <div className="card-body">
                       <h6 className="card-title fw-bold text-blue mb-0">Selasa, 14 November 2023</h6>
-                      <h6 className="card-text text-center fw-bold">Apakah kamu mengikuti kegiatan PKL hari ini?</h6>
-                      <div className="d-flex justify-content-center">
-                        <button className="btn btn-primary px-4 fw-semibold me-3" data-bs-toggle="modal" data-bs-target="#presentModal">
-                          Hadir
-                        </button>
-                        <button className="btn btn-danger px-4 fw-semibold" data-bs-toggle="modal" data-bs-target="#absentModal">
-                          Tidak Hadir
-                        </button>
-                      </div>
+                      {laporan && laporan[1] ? (
+                        <div className="row g-0">
+                          <div className="col-md-8">
+                            <div className="card-body">
+                              <p className="card-text text-justify">{laporan[1].aktifitas_h}</p>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <img src={imgLaporanHarian} alt="" className="img-fluid rounded-3" />
+                          </div>
+                        </div>
+                      ) : (
+                        <>
+                          <h6 className="card-text text-center fw-bold">Apakah kamu mengikuti kegiatan PKL hari ini?</h6>
+                          <div className="d-flex justify-content-center">
+                            <button className="btn btn-primary px-4 fw-semibold me-3" data-bs-toggle="modal" data-bs-target="#presentModal">
+                              Hadir
+                            </button>
+                            <button className="btn btn-danger px-4 fw-semibold" data-bs-toggle="modal" data-bs-target="#absentModal">
+                              Tidak Hadir
+                            </button>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
 
@@ -291,14 +346,14 @@ const Laporan = () => {
                   </button>
 
                   <h5 className="text-center font-poppins fw-semibold mb-3">Selasa, 14 November 2023</h5>
-                  <textarea className="border-0 rounded-4 p-3" placeholder="Deskripsikan hasil belajarmu!" name="" id="" cols="30" rows="10" style={{ width: '100%', height: '150px' }}></textarea>
+                  <textarea onChange={laporanOnchange} className="border-0 rounded-4 p-3" placeholder="Deskripsikan hasil belajarmu!" name="" id="inputLaporan" cols="30" rows="10" style={{ width: '100%', height: '150px' }}></textarea>
                   <div className="bg-white rounded-4 text-center pt-4 pb-1 mt-2 mb-3">
                     <FaCloudUploadAlt size={50} className="text-primary" />
                     <p>Unggah Gambar</p>
                   </div>
 
                   <div className="d-flex justify-content-center">
-                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirm">
+                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLaporan">
                       Selesai
                     </button>
                   </div>
@@ -371,7 +426,7 @@ const Laporan = () => {
                   <button className="border-0" data-bs-dismiss="modal">
                     <FaArrowAltCircleLeft size={30} className="text-primary m-0" />
                   </button>
-                  <p className='mt-2 mb-0'>Unggah file laporan akhir kamu disini</p>
+                  <p className="mt-2 mb-0">Unggah file laporan akhir kamu disini</p>
                   <div className="bg-white rounded-4 text-center pt-4 pb-1 mt-2 mb-3">
                     <FaCloudUploadAlt size={50} className="text-primary" />
                     <p>Unggah File</p>
@@ -388,6 +443,15 @@ const Laporan = () => {
           </div>
 
           <PopUpConfirm id="confirm" desc="Anda ingin mengirim laporan anda?" btn1={{ cName: 'btn-danger', url: '#', text: 'Batal' }} btn2={{ cName: 'btn-primary', url: '#', text: 'Kirim' }} />
+
+
+          <PopUpConfirm
+            id="confirmLaporan"
+            desc="Anda ingin mengirim laporan anda?"
+            btn1={{ cName: 'btn-danger', url: '#', text: 'Batal' }}
+            btn2={{ cName: 'btn-primary', url: '#', text: 'Kirim' }}
+            data={{ tanggal_h: '2023-11-14', foto_kegiatan_h: '', aktifitas_h: inputLaporanValue, absen_h: 'Hadir', user_id:id , status_id: 1 }}
+          />
         </div>
       </div>
     </LaporanStyled>

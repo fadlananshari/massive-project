@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import axios from 'axios';
+
 import Footer from '../Components/Footer/Footer';
 import Home from '../Pages/User/Home';
 import Login from '../Pages/User/Login/Login';
@@ -17,6 +19,7 @@ import Statusregister from '../Pages/User/status_register';
 import Laporan from '../Pages/User/Laporan/Laporan';
 import PublicRoutes from './PublicRoutes';
 import AuthRoutes from './AuthRoutes';
+import DetailLaporan from '../Pages/User/Laporan/DetailLaporan';
 import NotFound from '../Pages/NotFound';
 
 // admin
@@ -33,6 +36,27 @@ const Routing = () => {
   const isLoggin = token === null ? false : true;
 
   const [showFooter, setShowFooter] = useState(true);
+
+  const [userId, setUserId] = useState(null);
+
+  const fetchUserData = async () => {
+    try {
+      const idUserPromise = axios.get(`http://localhost:4000/api/v1/decode-token/${token}`);
+      const idUserResponse = await idUserPromise;
+  
+      console.log('id user response:', idUserResponse.data);
+      setUserId(idUserResponse.data.data.userId);
+      
+      // Setelah setUserId, Anda dapat menggunakan userId di sini jika diperlukan
+      console.log('User ID:', idUserResponse.data.data.userId);
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+    }
+  };
+  
+  React.useEffect(() => {
+    fetchUserData();
+  }, []);
 
   return (
     <>
@@ -58,7 +82,8 @@ const Routing = () => {
           <Route path="pendaftaran/1" element={<FormDaftar1 />} />
           <Route path="pendaftaran/2" element={<FormDaftar2 />} />
           <Route path="status-register" element={<Statusregister />} />
-          <Route path="laporan" element={<Laporan />} />
+          <Route path="detail-laporan" element={<DetailLaporan />} />
+          <Route path="laporan" element={<Laporan id={userId} />} />
           <Route path="profile" element={<Profile />} />
           <Route path="detail-status-pendaftaran/:id" element={<StatusPendaftaran />} />
           <Route path="notifikasi" element={<Notifikasi />} />
