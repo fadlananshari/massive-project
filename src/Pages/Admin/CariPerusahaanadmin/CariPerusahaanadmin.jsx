@@ -13,8 +13,8 @@ const CariPerusahaanadmin = () => {
   const data = [
     { label: "Beranda", url: "/homepage" },
     { label: "Program", url: "/pilih-jurusan" },
-    { label: "Notifikasi", url: "/notifikasi" },
-    { label: "Kegiatanku", url: "/kegiatanku" },
+    { label: "Notifikasi", url: "/notifikasi-admin" },
+    { label: "Kegiatanku Siswa", url: "/kegiatan-siswa" },
   ];
   return (
     <>

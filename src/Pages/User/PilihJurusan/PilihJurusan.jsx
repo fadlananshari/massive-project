@@ -3,8 +3,10 @@ import JurusanCarousel from "../../../Components/Jurusan/JurusanCarousel";
 import Img from "../../../assets/pilih-jurusan/pilih-jurusan-img.png";
 import Navbar from "../../../Components/Navbar/Navbar";
 import JurusanCard from "../../../Components/Jurusan/JurusanCard";
-import JurusanList from "./JurusanList";
 import PilihJurusanStyled from "./PilihJurusan.styled.js";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const PilihJurusan = () => {
   const data = [
@@ -13,6 +15,24 @@ const PilihJurusan = () => {
     { label: "Notifikasi", url: "/notifikasi" },
     { label: "Kegiatanku", url: "/status-register" },
   ];
+
+  const [dataJurusan, setDataJurusan] = useState([]);
+  const dataJurusanUrl = "http://localhost:4000/api/v1/jurusan";
+
+  const getDataJurusan = async () => {
+    const response = await axios.get(dataJurusanUrl);
+    const data = response.data.data;
+    setDataJurusan(data);
+  };
+
+  useEffect(() => {
+    try {
+      getDataJurusan();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   return (
     <>
       <Navbar data={data} login={false} profile={true} />
@@ -36,11 +56,14 @@ const PilihJurusan = () => {
               </h1>
 
               <div className="row row-cols-2 row-cols-lg-3 d-flex">
-                {JurusanList.map((item, index) => {
-                  return (
-                    <JurusanCard jurusan={item} key={index} className="col" />
-                  );
-                })}
+                {dataJurusan.map((item, index) => (
+                  <JurusanCard
+                    key={index}
+                    gambar={item.gambar_jurusan}
+                    nama={item.nama_jurusan}
+                    url={`/cari-perusahaan/${item.id}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
