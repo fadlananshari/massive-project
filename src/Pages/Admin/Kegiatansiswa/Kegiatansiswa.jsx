@@ -1,8 +1,8 @@
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../../Components/Navbar/Navbar";
 import KegiatansiswaStyled from "./Kegiatansiswwa.styled";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import imgTBSM from "../../assets/kegiatan-siswa/tbsm.png";
+import imgTBSM from "../../../assets/kegiatan-siswa/tbsm.png";
 
 const Kegiatansiswa = () => {
   const data = [
