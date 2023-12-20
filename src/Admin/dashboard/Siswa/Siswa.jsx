@@ -92,7 +92,7 @@ function Siswa() {
                                 <div className="modal-dialog">
                                     <div className="modal-content">
                                     <div className="modal-body text-center">
-                                        <h3 classNameName="title">Konfirmasi</h3>
+                                        <h3 className="title">Konfirmasi</h3>
                                         Apakah anda yakin ingin menghapus data ini?
                                     </div>
                                     <div className="modal-footer">

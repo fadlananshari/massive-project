@@ -2,8 +2,12 @@ import React from "react";
 import Sidebar from "../sidebar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Siswa from "./Siswa";
+import { useEffect } from "react";
 
-function Dashboardsiswa () {
+function Dashboardsiswa (props) {
+    useEffect(() => {
+        props.setShowFooter();
+      }, [props]);
     return (
         <div className="d-flex">
            <div className="position-fixed">

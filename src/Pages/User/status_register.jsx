@@ -38,13 +38,8 @@ const Statusregister = () => {
           </div>
         </div>
         <div className="container">
-<<<<<<< HEAD:src/Pages/status_register.jsx
           <div className="row mt-5 row-cols-1 row-cols-md-4 g-4">
             <div className="col-md-auto mb-5 ">
-=======
-          <div className="row mt-5 pb-5 row-cols-1 row-cols-lg-4 gap-4">
-            <div className="col">
->>>>>>> 21c859d58a99a30f6e6f151cb02bc6506dfa4699:src/Pages/User/status_register.jsx
               <div className="card col-md-4" style={{ width: '289px', height: 'auto' }}>
                 <img src={img_form} className="card-img-top" alt="" style={{ width: 'auto', height: '174px' }} />
                 <div className="card-body" style={{ width: 'auto', height: '167px' }}>
