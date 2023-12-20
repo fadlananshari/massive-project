@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Admin/dashboard/navbar";
 import Dashboard from "./Admin/dashboard/Dashboard/dashboard";
@@ -91,6 +92,12 @@ function App() {
       {/* <Footer /> */}
     </Router>
   );
+=======
+import Routing from "./Routes";
+
+function App() {
+  return <Routing />;
+>>>>>>> 21c859d58a99a30f6e6f151cb02bc6506dfa4699
 }
 
 export default App;
