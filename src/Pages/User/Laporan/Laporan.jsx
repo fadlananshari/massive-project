@@ -11,14 +11,12 @@ import axios from 'axios';
 
 const Laporan = ({id}) => {
   const [laporan, setLaporan] = useState();
-  const [idUser, setIdUser] = useState();
   const token = localStorage.getItem('Authorize');
   const fetchUserData = async () => {
     try {
-      const idUser = await axios.get(`http://localhost:4000/api/v1/decode-token/${token}`);
+      const idUser = await axios.get(`http://localhost:4000/api/v1/decode-token/${token}`);      
       const laporanByIdUser = await axios.get(`http://localhost:4000/api/v1/laporan/${idUser.data.data.userId}`);
       setLaporan(laporanByIdUser.data.data);
-      setIdUser(idUser.data.data.userId);
     } catch (error) {
       console.error('Error fetching user data:', error);
     }

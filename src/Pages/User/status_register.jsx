@@ -38,7 +38,7 @@ const Statusregister = () => {
           </div>
         </div>
         <div className="container">
-          <div className="row mt-5 row-cols-1 row-cols-md-4 g-4">
+          <div className="row mt-5 pb-5 row-cols-1 row-cols-lg-4 gap-4">
             <div className="col">
               <div className="card col-md-4" style={{ width: '289px', height: 'auto' }}>
                 <img src={img_form} className="card-img-top" alt="" style={{ width: 'auto', height: '174px' }} />

@@ -29,8 +29,8 @@ import Addperusahaan from '../Pages/Admin/TambahPerusahaan/TambahPerusahaan';
 import LoginAdmin from '../Pages/Admin/LoginAdmin';
 
 const Routing = () => {
-  const adminToken = localStorage.getItem('AdminAuthorize');
-  const isAdminLoggin = adminToken === null ? false : true;
+  // const adminToken = localStorage.getItem('AdminAuthorize');
+  // const isAdminLoggin = adminToken === null ? false : true;
 
   const token = localStorage.getItem('Authorize');
   const isLoggin = token === null ? false : true;
@@ -44,11 +44,11 @@ const Routing = () => {
       const idUserPromise = axios.get(`http://localhost:4000/api/v1/decode-token/${token}`);
       const idUserResponse = await idUserPromise;
   
-      console.log('id user response:', idUserResponse.data);
+      // console.log('id user response:', idUserResponse.data);
       setUserId(idUserResponse.data.data.userId);
       
       // Setelah setUserId, Anda dapat menggunakan userId di sini jika diperlukan
-      console.log('User ID:', idUserResponse.data.data.userId);
+      // console.log('User ID:', idUserResponse.data.data.userId);
     } catch (error) {
       console.error('Error fetching user data:', error);
     }
@@ -79,8 +79,8 @@ const Routing = () => {
           <Route path="pilih-jurusan" element={<PilihJurusan />} />
           <Route path="cari-perusahaan/:id" element={<CariPerusahaan />} />
           <Route path="detail-perusahaan/:id" element={<DetailPerusahaan />} />
-          <Route path="pendaftaran/1" element={<FormDaftar1 />} />
-          <Route path="pendaftaran/2" element={<FormDaftar2 />} />
+          <Route path="pendaftaran/1" element={<FormDaftar1 id={userId} />} />
+          <Route path="pendaftaran/2" element={<FormDaftar2 id={userId}/>} />
           <Route path="status-register" element={<Statusregister />} />
           <Route path="detail-laporan" element={<DetailLaporan />} />
           <Route path="laporan" element={<Laporan id={userId} />} />

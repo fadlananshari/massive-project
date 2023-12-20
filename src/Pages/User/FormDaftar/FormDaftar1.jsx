@@ -1,18 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import Navbar from '../../../Components/Navbar/Navbar';
 import img_form from '../../../assets/img_form.jpeg';
 import FormDaftarStyled from './FormDaftar.styled';
+import axios from 'axios';
 
 const FormDaftar1 = () => {
+  const [user, setUser] = useState(null);
+  const token = localStorage.getItem('Authorize');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const decodedToken = await axios.get(`http://localhost:4000/api/v1/decode-token/${token}`);
+        const userId = decodedToken.data.data.userId;
+        const response = await axios.get(`http://localhost:4000/api/v1/users/${userId}`);
+        setUser(response.data.data);
+        console.log(response.data.data);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    if (token) {
+      fetchData();
+    }
+  }, [token]);
+
   const data = [
     { label: 'Beranda', url: '/homepage' },
     { label: 'Program', url: '/pilih-jurusan' },
     { label: 'Notifikasi', url: '/notifikasi' },
     { label: 'Kegiatanku', url: '/status-register' },
   ];
+
   return (
     <>
       <Navbar data={data} login={false} profile={true} />
@@ -22,7 +45,6 @@ const FormDaftar1 = () => {
             <div className="img text-center">
               <img src={img_form} alt="" className="img-fluid" style={{ borderRadius: '10px' }} />
             </div>
-            <img src="" alt="" />
             <div className="text-center mb-5">
               <h1 className="text-primary fw-bold">Formulir Pendaftaran</h1>
               <h5>Praktik Kerja Lapangan</h5>
@@ -32,7 +54,7 @@ const FormDaftar1 = () => {
                 Nama
               </label>
               <div class="col-sm-5">
-                <input type="name" class="form-control" id="inputname" />
+                <input type="name" class="form-control" id="inputname" value={user[0].nama}/>
               </div>
             </div>
             <div class="row mb-3">
@@ -40,10 +62,10 @@ const FormDaftar1 = () => {
                 NISN
               </label>
               <div class="col-sm-5">
-                <input type="number" class="form-control" id="inputname" />
+                <input type="number" class="form-control" id="inputnisn" value={user[0].nisn}/>
               </div>
             </div>
-            <div className="row  mb-3">
+            <div className="row mb-3">
               <label for="inputjurusan" class="col-sm-2 col-form-label">
                 Jurusan
               </label>
@@ -61,7 +83,6 @@ const FormDaftar1 = () => {
                 </select>
               </div>
             </div>
-
             <div>
               <label for="inputjeniskelamin" class="col-sm-2 col-form-label">
                 Jenis Kelamin
@@ -79,13 +100,12 @@ const FormDaftar1 = () => {
                 </label>
               </div>
             </div>
-
             <div className="row mb-3">
               <label for="inputalamat" className="col-sm-2 col-form-label">
                 Alamat
               </label>
               <div className="col-sm-5">
-                <textarea type="text" id="inputalamat" className="form-control" aria-describedby="nisnHelpInline" />
+                <textarea type="text" id="inputalamat" className="form-control" aria-describedby="nisnHelpInline" value={user[0].alamat}/>
               </div>
             </div>
             <div class="row mb-3">
@@ -93,7 +113,7 @@ const FormDaftar1 = () => {
                 Alamat Email
               </label>
               <div class="col-sm-5">
-                <input type="email" class="form-control" id="inputemail" />
+                <input type="email" class="form-control" id="inputemail" value={user[0].email}/>
               </div>
             </div>
             <div class="row mb-3">
@@ -104,7 +124,6 @@ const FormDaftar1 = () => {
                 <input type="number" class="form-control" id="inputnohp" />
               </div>
             </div>
-
             <div className="mb-3 form-check">
               <input type="radio" className="form-check-input" id="exampleCheck1" />
               <label className="form-check-label" for="exampleCheck1">
