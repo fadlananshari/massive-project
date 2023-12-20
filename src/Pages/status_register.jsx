@@ -39,7 +39,7 @@ const Statusregister = () => {
         </div>
         <div className="container">
           <div className="row mt-5 row-cols-1 row-cols-md-4 g-4">
-            <div className="col">
+            <div className="col-md-auto mb-5 ">
               <div className="card col-md-4" style={{ width: '289px', height: 'auto' }}>
                 <img src={img_form} className="card-img-top" alt="" style={{ width: 'auto', height: '174px' }} />
                 <div className="card-body" style={{ width: 'auto', height: '167px' }}>
@@ -55,7 +55,7 @@ const Statusregister = () => {
                 </div>
               </div>
             </div>
-            <div className="col">
+            <div className="col-md-auto">
               <div className="card col-md-4" style={{ width: '289px', height: 'auto' }}>
                 <img src={img_form} className="card-img-top" alt="" style={{ width: 'auto', height: '174px' }} />
                 <div className="card-body" style={{ width: 'auto', height: '167px' }}>
@@ -63,9 +63,9 @@ const Statusregister = () => {
                   <h5 className="mb-0">Service Computer</h5>
                   <p className="card-text mb-0">Aulia Computer</p>
                   <p className="card-text">Griya Abadi - Bangkalan</p>
-                  <button type="sebelumnya" className="btn btn-outline-primary float-start" style={{ width: '50%', height: 'auto' }}>
+                  <Link to="/laporan" type="sebelumnya" className="btn btn-outline-primary float-start" style={{ width: '50%', height: 'auto' }}>
                     Detail
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
