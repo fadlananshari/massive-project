@@ -1,15 +1,15 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import Register_img from '../../../assets/register-img.png';
-import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa6';
-import { FcGoogle } from 'react-icons/fc';
-import { FaFacebook, FaTwitter } from 'react-icons/fa';
-import SignUpStyled from './SignUp.styled';
-import Navbar from '../../../Components/Navbar/Navbar';
-import { useNavigate } from 'react-router-dom';
-import Popup from '../../../Components/Popup/Popup';
-import imgSukses from '../../../assets/detail-perusahaan/berhasil-daftar.png';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useState, useEffect } from "react";
+import Register_img from "../../../assets/register-img.png";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
+import SignUpStyled from "./SignUp.styled";
+import Navbar from "../../../Components/Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
+import Popup from "../../../Components/Popup/Popup";
+import imgSukses from "../../../assets/detail-perusahaan/berhasil-daftar.png";
+import { Link } from "react-router-dom";
 
 const SignUp = (props) => {
   useEffect(() => {
@@ -18,14 +18,13 @@ const SignUp = (props) => {
   }, [props]);
   const [password, setPassword] = useState(false);
 
-
   const navigate = useNavigate();
   const goHomepage = () => {
-    navigate('/homepage');
+    navigate("/homepage");
   };
 
   const goHome = () => {
-    navigate('/');
+    navigate("/");
   };
   return (
     <>
@@ -34,7 +33,9 @@ const SignUp = (props) => {
           <div className="container">
             <div className="row mx-auto">
               <div className="col-5 d-none d-lg-block p-5 ms-auto bg-white border-end">
-                <h3 className="fw-bolder text-uppercase">mempersiapkan siswa untuk masa depan adalah tujuan kami</h3>
+                <h3 className="fw-bolder text-uppercase">
+                  mempersiapkan siswa untuk masa depan adalah tujuan kami
+                </h3>
                 <div className="mx-auto width-max-content pt-3">
                   <img src={Register_img} alt="" className="img-fluid" />
                 </div>
@@ -49,28 +50,48 @@ const SignUp = (props) => {
                 </div>
                 <h1 className="login fw-bold">Sign Up</h1>
                 <h5 className="fw-bold">Ayo segera daftarkan akun anda!</h5>
-                <div className='form'>
+                <div className="form">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control border-bottom" id="floatingInput" placeholder="Nama Depan" />
+                    <input
+                      type="text"
+                      class="form-control border-bottom"
+                      id="floatingInput"
+                      placeholder="Nama Depan"
+                    />
                     <label for="floatingInput" className="">
                       Nama Depan
                     </label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control border-bottom" id="floatingInput" placeholder="Nama Belakang" />
+                    <input
+                      type="text"
+                      class="form-control border-bottom"
+                      id="floatingInput"
+                      placeholder="Nama Belakang"
+                    />
                     <label for="floatingInput" className="">
                       Nama Belakang
                     </label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control border-bottom" id="floatingInput" placeholder="name@example.com" />
+                    <input
+                      type="email"
+                      class="form-control border-bottom"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
                     <label for="floatingInput" className="">
                       Username Atau Email
                     </label>
                   </div>
                   <div className="row mb-4">
                     <div class="form-floating col-11">
-                      <input type={password ? 'text' : 'password'} class="form-control border-bottom" id="floatingPassword" placeholder="Password" />
+                      <input
+                        type={password ? "text" : "password"}
+                        class="form-control border-bottom"
+                        id="floatingPassword"
+                        placeholder="Password"
+                      />
                       <label for="floatingPassword" className="ms-2">
                         Password
                       </label>
@@ -96,21 +117,31 @@ const SignUp = (props) => {
 
                   {/* <div className="text-end text-decoration-none text-end"> */}
                   <div class="form-check ms-auto width-max-content">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
                     <label class="form-check-label" for="flexCheckDefault">
                       Saya setuju dengan persyaratan layanan
                     </label>
                   </div>
                   {/* </div> */}
-                  <button type="submit" data-bs-toggle="modal" data-bs-target="#suksesRegister" className="btn-login px-4 mt-4">
+                  <button
+                    type="submit"
+                    data-bs-toggle="modal"
+                    data-bs-target="#suksesRegister"
+                    className="btn-login px-4 mt-4"
+                  >
                     Register
                   </button>
                 </div>
                 <div className="mt-3 py-2 text-center">
                   <p>Masuk Dengan:</p>
                   <div className="d-flex justify-content-center gap-3">
-                    <FaFacebook size={40} style={{ color: '#1877f2' }} />
-                    <FaTwitter size={40} style={{ color: '#1da1f2' }} />
+                    <FaFacebook size={40} style={{ color: "#1877f2" }} />
+                    <FaTwitter size={40} style={{ color: "#1da1f2" }} />
                     <FcGoogle size={40} />
                   </div>
                 </div>
