@@ -4,8 +4,11 @@ import "bootstrap/dist/js/bootstrap";
 import img_form from "../../assets/img_form.jpeg";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
+import { useParams } from "react-router";
 
 const FormRegist1 = () => {
+
+
   const data = [
     { label: "Beranda", url: "/homepage" },
     { label: "Program", url: "/pilih-jurusan" },

@@ -101,7 +101,7 @@ const Routing = () => {
           <Route path="cari-perusahaan/:id" element={<CariPerusahaan />} />
           <Route path="detail-perusahaan/:id" element={<DetailPerusahaan />} />
           <Route
-            path="pendaftaran/:id"
+            path="pendaftaran/:pkl_id"
             element={<FormDaftar1 id_user={userId} />}
           />
           {/* <Route path="pendaftaran/:id" element={<FormDaftar2 />} /> */}

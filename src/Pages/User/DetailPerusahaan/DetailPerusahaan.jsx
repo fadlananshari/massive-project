@@ -15,6 +15,7 @@ import Tools from '../../../assets/detail-perusahaan/Tools.png';
 import Navbar from '../../../Components/Navbar/Navbar';
 
 const DetailPerusahaan = () => {
+
   const data = [
     { label: 'Beranda', url: '/homepage' },
     { label: 'Program', url: '/pilih-jurusan' },
@@ -105,7 +106,7 @@ const DetailPerusahaan = () => {
                   <img src={Map} alt="" className="img-fluid" />
                 </div>
               </div>
-              <Link to="/pendaftaran/1" className="btn-daftar">
+              <Link to="/pendaftaran/1/3" className="btn-daftar">
                 Daftar
               </Link>
             </div>
