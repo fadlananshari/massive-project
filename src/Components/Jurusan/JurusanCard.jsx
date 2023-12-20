@@ -8,7 +8,7 @@ const JurusanCard = ({ gambar, nama, url }) => {
       <div className="py-3">
         <img src={gambar} alt="" className="img-fluid rounded-4" />
         <div className="d-md-flex justify-content-between px-3 py-2">
-          <p className="mb-2">{nama}</p>
+          <p className="mb-2 fs-6 fw-semibold">{nama}</p>
           <Link to={url} className="btn-cari px-4">
             Cari
           </Link>

@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import Swal from 'sweetalert2';
-import LoginStyled from './Login.styled';
-import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa6';
-import { FcGoogle } from 'react-icons/fc';
-import { FaFacebook, FaTwitter } from 'react-icons/fa';
-import Login_img from '../../../assets/login-img.png';
-
+import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Swal from "sweetalert2";
+import LoginStyled from "./Login.styled";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
+import Login_img from "../../../assets/login-img.png";
 
 const axiosHandler = async (url, data) => await axios.post(url, data);
 
@@ -33,11 +32,11 @@ const Login = (props) => {
 
       if (response.status === 200) {
         const token = response.data.token;
-        localStorage.setItem('Authorize', token);
+        localStorage.setItem("Authorize", token);
 
         Swal.fire({
-          icon: 'success',
-          title: 'Berhasil',
+          icon: "success",
+          title: "Berhasil",
           text: response.data.message,
         }).then(() => {
           window.location.reload();
@@ -47,9 +46,9 @@ const Login = (props) => {
       reset();
     } catch (error) {
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: error.response ? error.response.data : 'Something went wrong!',
+        icon: "error",
+        title: "Oops...",
+        text: error.response ? error.response.data : "Something went wrong!",
       });
     }
   };
@@ -63,7 +62,7 @@ const Login = (props) => {
   const navigate = useNavigate();
 
   const goHome = () => {
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -73,7 +72,9 @@ const Login = (props) => {
           <div className="container">
             <div className="row mx-auto">
               <div className="col-5 d-none d-md-block p-5 ms-auto bg-white border-end">
-                <h3 className="fw-bolder">MENJELAJAHI PENGALAMAN BARU BERSAMA PKL SMEKTA</h3>
+                <h3 className="fw-bolder">
+                  MENJELAJAHI PENGALAMAN BARU BERSAMA PKL SMEKTA
+                </h3>
                 <img src={Login_img} alt="" className="img-fluid" />
               </div>
               <div className="col-12 col-md-5 px-5 pt-5 pb-3 me-auto bg-white border-start">
@@ -91,12 +92,26 @@ const Login = (props) => {
                 </h5>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-floating mb-3">
-                    <input type="number" className="form-control border-bottom" id="floatingInput" placeholder="NISN" {...register('nisn', { required: 'NISN is required' })} />
+                    <input
+                      type="number"
+                      className="form-control border-bottom"
+                      id="floatingInput"
+                      placeholder="NISN"
+                      {...register("nisn", { required: "NISN is required" })}
+                    />
                     <label htmlFor="floatingInput">NISN</label>
                   </div>
                   <div className="row mb-4">
                     <div className="form-floating col-11">
-                      <input type={password ? 'text' : 'password'} className="form-control border-bottom" id="floatingPassword" placeholder="Password" {...register('password', { required: 'Password is required' })} />
+                      <input
+                        type={password ? "text" : "password"}
+                        className="form-control border-bottom"
+                        id="floatingPassword"
+                        placeholder="Password"
+                        {...register("password", {
+                          required: "Password is required",
+                        })}
+                      />
                       <label htmlFor="floatingPassword" className="ms-2">
                         Password
                       </label>
@@ -119,7 +134,9 @@ const Login = (props) => {
                       />
                     )}
                   </div>
-                  <p className="text-end text-danger text-decoration-none text-end">Lupa Password?</p>
+                  <p className="text-end text-danger text-decoration-none text-end">
+                    Lupa Password?
+                  </p>
                   <button type="submit" className="btn-login px-4 mt-4">
                     Login
                   </button>
@@ -127,8 +144,8 @@ const Login = (props) => {
                 <div className="mt-5 pt-5 text-center">
                   <p>Masuk Dengan:</p>
                   <div className="d-flex justify-content-center gap-3">
-                    <FaFacebook size={40} style={{ color: '#1877f2' }} />
-                    <FaTwitter size={40} style={{ color: '#1da1f2' }} />
+                    <FaFacebook size={40} style={{ color: "#1877f2" }} />
+                    <FaTwitter size={40} style={{ color: "#1da1f2" }} />
                     <FcGoogle size={40} />
                   </div>
                 </div>
